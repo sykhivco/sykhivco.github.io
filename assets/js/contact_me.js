@@ -1,0 +1,30 @@
+"use strict";
+let datafire = require('datafire');
+
+var google_gmail = require('@datafire/google_gmail').actions;
+module.exports = new datafire.Action({
+  inputs: [{
+    title: "emailAddress",
+    type: "string",
+    pattern: ".*@.*\\..*",
+    maxLength: 254
+  }],
+  handler: async (input, context) => {
+    let user = await google_gmail.users.getProfile({
+      userId: 'me',
+    }, context);
+    let message = await google_gmail.buildMessage({
+      to: user.emailAddress,
+      from: user.emailAddress,
+      subject: "A new message from " + input.emailAddress,
+      body: input.message,
+    }, context);
+    let sent = await google_gmail.users.messages.send({
+      userId: "me",
+      body: {
+        raw: message,
+      },
+    }, context);
+    return "Success";
+  },
+});
