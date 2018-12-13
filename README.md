@@ -1,1 +1,1 @@
-# sykhivco.githib.io
+# sykhivco.github.io
