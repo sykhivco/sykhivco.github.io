@@ -44,30 +44,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<meta name="msapplication-starturl" content="/">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
-<!-- Formcarry https://formcarry.com/documentation/getting-deeper -->	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>
-$(function(){
-    $(".ajaxForm").submit(function(e){
-        e.preventDefault();
-        var href = $(this).attr("action");
-        $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: href,
-            data: $(this).serialize(),
-            //success: function(response){
-            //    if(response.status == "success"){
-            //        alert("Дякую!");
-            //    }else{
-            //        alert("Упс :( Трапилася халепа: " + response.message);
-            //    }
-            //}
-        });
-    });
-});
-</script>
-<!-- Formcarry https://formcarry.com/documentation/getting-deeper -->	
 	<body class="is-preload">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLPHBQP"
@@ -103,6 +79,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		<!-- Scripts -->
 			<script src="assets/js/main.js"></script>
-
+<!-- Formcarry https://formcarry.com/documentation/getting-deeper -->	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+$(function(){
+    $(".ajaxForm").submit(function(e){
+        e.preventDefault();
+        var href = $(this).attr("action");
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: href,
+            data: $(this).serialize(),
+            success: function(response){
+                if(response.status == "success"){
+                    alert("Дякую!");
+                }else{
+                    alert("Упс :( Трапилася халепа: " + response.message);
+                }
+            }
+        });
+    });
+});
+</script>
+<!-- Formcarry https://formcarry.com/documentation/getting-deeper -->	
 	</body>
 </html>
