@@ -56,13 +56,13 @@ $(function(){
             dataType: "json",
             url: href,
             data: $(this).serialize(),
-            success: function(response){
-                if(response.status == "success"){
-                    alert("Дякую!");
-                }else{
-                    alert("Упс :( Трапилася халепа: " + response.message);
-                }
-            }
+            //success: function(response){
+            //    if(response.status == "success"){
+            //        alert("Дякую!");
+            //    }else{
+            //        alert("Упс :( Трапилася халепа: " + response.message);
+            //    }
+            //}
         });
     });
 });
