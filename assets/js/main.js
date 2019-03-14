@@ -160,7 +160,7 @@
 
 							// Show message.
 								$message._show('success', 'Дякую!');
-								$message._show('failure', 'Упс, трапилася халепа. Спробуй ще.');
+								//$message._show('failure', 'Упс, трапилася халепа. Спробуй ще.');
 
 						}, 750);
 
