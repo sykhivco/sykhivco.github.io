@@ -38,6 +38,7 @@ if ("serviceWorker" in navigator) {
 }
 </script>
 <!-- End of Service Worker -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 		<title>Коворкінг на Сихові</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
@@ -85,9 +86,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" class="ajaxForm" action="https://formcarry.com/s/3gpMjqF7OIX" method="post" accept-charset="UTF-8">
+			<form id="signup-form" class="ajaxForm" action="https://formcarry.com/s/3gpMjqF7OIX" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
 				<input type="text" name="name" id="name" placeholder="Ім'я" required aria-required="true" />
 				<input type="email" name="email" id="email" placeholder="Ваш email" required aria-required="true" />
+				<div class="g-recaptcha" data-sitekey="C6Lcx0JcUAAAAAKTrKq17QZZoIRmM6N2uaxDYltl4"></div>
 				<input type="submit" id="submit" name="submit" value="Надіслати" />
 				<input type="hidden" name="_gotcha"> <!-- use this to prevent spam -->
 			</form>
