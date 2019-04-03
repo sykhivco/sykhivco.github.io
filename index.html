@@ -6,7 +6,7 @@
 -->
 <html lang="uk">
 <head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131088909-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -24,17 +24,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <!-- Service Worker -->
 <script>
-if ("serviceWorker" in navigator) { 
-  window.addEventListener("load", function() {   
-    navigator.serviceWorker.register("/sw.js").then(
-      function(registration) { 
-        // Registration was successful
-        console.log("ServiceWorker registration successful with scope: ", registration.scope); }, 
-      function(err) { 
-        // registration failed :( 
-        console.log("ServiceWorker registration failed: ", err); 
-      }); 
+// if ("serviceWorker" in navigator) { 
+//   window.addEventListener("load", function() {   
+//     navigator.serviceWorker.register("/sw.js").then(
+//       function(registration) { 
+//         // Registration was successful
+//         console.log("ServiceWorker registration successful with scope: ", registration.scope); }, 
+//       function(err) { 
+//         // registration failed :( 
+//         console.log("ServiceWorker registration failed: ", err); 
+//       }); 
+//   });
+// }
+
+if ('serviceWorker' in navigator && 'PushManager' in window) {
+  console.log('Service Worker and Push is supported');
+
+  navigator.serviceWorker.register('/sw.js')
+  .then(function(swReg) {
+    console.log('Service Worker is registered', swReg);
+
+    swRegistration = swReg;
+  })
+  .catch(function(error) {
+    console.error('Service Worker Error', error);
   });
+} else {
+  console.warn('Push messaging is not supported');
+  pushButton.textContent = 'Push Not Supported';
 }
 </script>
 <!-- End of Service Worker -->
