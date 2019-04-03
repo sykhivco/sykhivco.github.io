@@ -82,21 +82,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- Header -->
 			<header id="header">
 				<h1>Коворкінг на Сихові</h1>
-				<p>Зручне робоче місце, кафе та дитячий садок.<br />
-				Залиште свій email і ви дізнаєтесь першими про відкриття</a>.</p>
+				<!-- <h2> Зручне робоче місце, кафе та дитячий садок.</h2><br /> -->
+				<p>Слідкуйте за нами в соціальних мережах <br />
+				щоб першими дізнатися про відкриття</a>.</p>
 			</header>
-
-		<!-- Signup Form -->
-			<form id="signup-form" class="ajaxForm" action="https://formcarry.com/s/3gpMjqF7OIX" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
-				<!-- <label for="name">Name</label> -->
-				<input type="text" name="name" id="name" placeholder="Ім'я" required aria-required="true" />
-				<!-- <label for="email">Email</label> -->
-				<input type="email" name="email" id="email" placeholder="Ваш email" required aria-required="true" />
-				<!--<div class="g-recaptcha" required aria-required="true" data-sitekey="6Lcx0JcUAAAAAKTrKq17QZZoIRmM6N2uaxDYltl4"> </div>-->
-				<input type="submit" id="submit" name="submit" value="Надіслати" />
-				<input type="hidden" name="_gotcha"> <!-- use this to prevent spam -->
-			</form>
-
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
@@ -112,29 +101,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		<!-- Scripts -->
 			<script src="assets/js/main.js"></script>
-<!-- Formcarry https://formcarry.com/documentation/getting-deeper -->	
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(function(){
-    $(".ajaxForm").submit(function(e){
-        e.preventDefault();
-        var href = $(this).attr("action");
-        $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: href,
-            data: $(this).serialize()
-            // success: function(response){
-            //     if(response.status == "success"){
-            //         $message._show('success', 'Дякую!');
-            //     }else{
-            //         $message._show('failure', 'Упс, трапилася халепа. Спробуй ще.');
-            //     }
-            // }
-        });
-    });
-});
-</script>
-<!-- Formcarry https://formcarry.com/documentation/getting-deeper -->	
 	</body>
 </html>
