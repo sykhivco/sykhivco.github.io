@@ -24,18 +24,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <!-- Service Worker -->
 <script>
-// if ("serviceWorker" in navigator) { 
-//   window.addEventListener("load", function() {   
-//     navigator.serviceWorker.register("/sw.js").then(
-//       function(registration) { 
-//         // Registration was successful
-//         console.log("ServiceWorker registration successful with scope: ", registration.scope); }, 
-//       function(err) { 
-//         // registration failed :( 
-//         console.log("ServiceWorker registration failed: ", err); 
-//       }); 
-//   });
-// }
 
 if ('serviceWorker' in navigator && 'PushManager' in window) {
   console.log('Service Worker and Push is supported');
@@ -55,7 +43,6 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
 }
 </script>
 <!-- End of Service Worker -->
-<script src='https://www.google.com/recaptcha/api.js'></script>
 <script type="text/javascript" src="//www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
 <script type="text/javascript" src="/firebase_subscribe.js"></script>
 		<title>Коворкінг на Сихові</title>
